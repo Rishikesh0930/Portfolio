@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rishikesh Kushwaha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/project.css' %}">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<a href="{% url 'home-page' %}" class="back-btn">
+    <i class="fas fa-arrow-left"></i>
+</a>
+
+<!-- BIG SIDE CIRCLES -->
+<div class="bg-circle big-left"></div>
+<div class="bg-circle big-right"></div>
+
+<!-- SMALL DECORATIVE DOTS -->
+<div class="dot d1"></div>
+<div class="dot d2"></div>
+
+<!-- MAIN CONTENT -->
+<div class="project-wrapper">
+    <h1 class="page-title">🏆 My Projects</h1>
+    <p class="page-subtitle">A collection of projects that reflect my learning, skills, and practical experience.</p>
+    <div class="card">
+        <div class="card-slider">
+            <div class="slider-track">
+                <img src="{% static 'images/Lv1.png' %}" alt="">
+                <img src="{% static 'images/Lv2.png' %}" alt="">
+                <img src="{% static 'images/Lv3.png' %}" alt="">
+            </div>
+        </div>
+        <h2>🎥 Live Vision</h2>
+        <div class="project-content">
+            <p>
+                The proposed system, “Live Vision” is an intelligent computer vision–based platform designed 
+                to detect and classify multiple object categories in real-time video streams. The system processes
+                live video input from cameras or video files and applies deep learning models to accurately 
+                identify and label objects across multiple predefined classes simultaneously. 
+            </p>
+            <div class="project-tech">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>Django</span>
+                <span>Deep Learning</span>
+                <span>Web Application</span>
+            </div>
+        </div>
+        <div class="project-actions">
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fas fa-play"></i> Live Demo
+            </button>
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fab fa-github"></i> Source Code
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-slider">
+            <div class="slider-track">
+                <img src="{% static 'images/va1.png' %}" alt="">
+                <img src="{% static 'images/va2.png' %}" alt="">
+                <img src="{% static 'images/va3.png' %}" alt="">
+            </div>
+        </div>
+        <h2>🤖 Voice Assistant</h2>
+        <div class="project-content">
+            <p>
+                An intelligent voice-controlled assistant that listens, understands,
+                and responds to user commands and you can click keybord buttons through the voice command.
+            </p>
+            <div class="project-tech">
+                <span>Python</span>
+                <span>Speech Recognition</span>
+                <span>PyAudio</span>
+            </div>
+        </div>
+        <div class="project-actions">
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fas fa-play"></i> Live Demo
+            </button>
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fab fa-github"></i> Source Code
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-slider">
+            <div class="slider-track">
+                <img src="{% static 'images/wa1.png' %}" alt="">
+                <img src="{% static 'images/wa2.png' %}" alt="">
+                <img src="{% static 'images/wa3.png' %}" alt="">
+            </div>
+        </div>
+        <h2>🌦️ Weather App</h2>
+        <div class="project-content">
+            <p>
+                A clean and responsive weather Desktop application that provides real-time
+                weather updates based on location or city search.
+            </p>
+            <div class="project-tech">
+                <span>Tkinter</span>
+                <span>CTkinter</span>
+                <span>Python</span>
+                <span>Weather API</span>
+            </div>
+        </div>
+        <div class="project-actions">
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fas fa-play"></i> Live Demo
+            </button>
+            <button class="btn primary" onclick="comingSoon()">
+                <i class="fab fa-github"></i> Source Code
+            </button>
+        </div>
+    </div>
+    <div class="coming-popup" id="comingPopup">
+        <div class="popup-box">
+            <h3>Coming Soon</h3>
+            <p>This feature will be available soon.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 All Rights Reserved | Rishikesh Kushwaha.</p>
+</footer>
+<script>
+    function comingSoon(){
+        document.getElementById("comingPopup").style.display = "flex";
+    }
+    function closePopup(){
+        document.getElementById("comingPopup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
