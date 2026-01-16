@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x7t#-6w@vugz!n!la5p6=e^e-qkn3&#qybobe@fg%63x$!=i0b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['Rishikesh0930.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.206.192.14']
 
 
 # Application definition
@@ -117,7 +117,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -137,5 +136,3 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rishikeshkushwaha181811@gmail.com'
 EMAIL_HOST_PASSWORD = 'xrdk evfm dwgi jntb'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-SECRET_KEY = os.environ.get('SECRET_KEY')
