@@ -14,6 +14,9 @@ def skills_page(request):
 def project_page(request):
     return render(request, 'project.html')
 
+def resume_page(request):
+    return render(request, 'resume.html')
+
 def contact_page(request):
     if request.method == "POST":
         name = request.POST.get("name")

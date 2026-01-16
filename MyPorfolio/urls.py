@@ -25,4 +25,5 @@ urlpatterns = [
     path('skills/', skills_page, name="skills-page"),
     path('project/', project_page, name="project-page"),
     path('contact/', contact_page, name="contact-page"),
+    path('resume/', resume_page, name="resume-page"),
 ]
