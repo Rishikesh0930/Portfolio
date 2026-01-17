@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x7t#-6w@vugz!n!la5p6=e^e-qkn3&#qybobe@fg%63x$!=i0b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -137,6 +137,8 @@ EMAIL_HOST_USER = 'rishikeshkushwaha181811@gmail.com'
 EMAIL_HOST_PASSWORD = 'xrdk evfm dwgi jntb'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
     "https://rishikesh0930-portfolio.onrender.com",
 ]
