@@ -18,17 +18,20 @@ def resume_page(request):
     return render(request, 'resume.html')
 
 def contact_page(request):
-    if request.method == "POST":
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        subject = request.POST.get("subject")
-        message = request.POST.get("message")
-        send_mail(
-            subject=f"{subject}",
-            message=f"From: {email}\n\nI'm {name}\n\n{message}",
-            from_email=email,
-            recipient_list=['rishikeshkushwaha181811@gmail.com'],
-            fail_silently=False,
-        )
-        messages.success(request, "Your message has been sent successfully!")
+    try:
+        if request.method == "POST":
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            subject = request.POST.get("subject")
+            message = request.POST.get("message")
+            send_mail(
+                subject=f"{subject}",
+                message=f"From: {email}\n\nI'm {name}\n\n{message}",
+                from_email=email,
+                recipient_list=['rishikeshkushwaha181811@gmail.com'],
+                fail_silently=False,
+            )
+            messages.success(request, "Your message has been sent successfully.")
+    except Exception:
+        messages.success(request, "Low internet connection! Please try again.")
     return render(request, 'contact.html')
