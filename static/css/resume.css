@@ -307,7 +307,7 @@ body {
 @media(max-width:420px) {
     .resume-wrapper {
         width: 90%;
-        margin: 65px auto 10px;
+        margin: 65px auto 20px;
         height: auto;
         padding: 0 20px;
         display: flex;

@@ -1,6 +1,7 @@
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+import time
 
 def home_page(request):
     return render(request, 'home.html')

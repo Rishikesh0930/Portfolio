@@ -201,7 +201,7 @@ body {
     text-decoration: none;
 }
 
-.social:hover {
+.social:active {
     background: #38BDF8;
     color: #0F172A;
 }
@@ -252,6 +252,10 @@ body {
         cursor: pointer;
         background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-toggle:active{
+        color: #38BDF8;
     }
 
     .role {
@@ -331,7 +335,7 @@ body {
     .nav-links a::after {
         display: none;
     }
-    .nav-links a:hover {
+    .nav-links a:active {
         background: none;
         color: #38BDF8;
         border-radius: 6px;
