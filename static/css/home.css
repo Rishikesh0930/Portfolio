@@ -202,8 +202,8 @@ body {
 }
 
 .social:hover {
-    background: initial;
-    color: initial;
+    background: #38BDF8;
+    color: #0F172A;
 }
 
 /* ===== DESKTOP ===== */
