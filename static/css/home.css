@@ -205,6 +205,10 @@ body {
     background: #38BDF8;
     color: #0F172A;
 }
+.social:active{
+    color: #38BDF8;
+    background: #0F172A;
+}
 
 /* ===== DESKTOP ===== */
 @media (min-width:769px) {
@@ -255,6 +259,9 @@ body {
     }
     .menu-toggle:hover{
         color: #38BDF8;
+    }
+    .menu-toggle:active{
+        color: #F1F5F9;
     }
 
     .role {
