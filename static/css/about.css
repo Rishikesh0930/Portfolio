@@ -178,7 +178,7 @@ body {
 
     .about-wrapper {
         max-width: 800px;
-        margin: 90px auto 70px;
+        margin: 90px auto 80px;
     }
 
     .card {
@@ -252,7 +252,7 @@ body {
     }
 
     .about-wrapper {
-        margin: 60px 15px 40px;
+        margin: 60px 15px 20px;
         gap: 20px;
     }
 
@@ -300,6 +300,11 @@ body {
     .back-btn:active {
         background: #38BDF8;
         color: #0F172A;
+    }
+
+    .about-wrapper {
+        margin: 60px 15px 20px;
+        gap: 20px;
     }
 
     .card h2 {
