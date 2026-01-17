@@ -250,9 +250,11 @@ body {
         display: block;
         font-size: 22px;
         cursor: pointer;
-        color: #38BDF8;
         background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+    .menu-toggle:hover{
+        color: #38BDF8;
     }
 
     .role {
