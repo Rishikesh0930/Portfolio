@@ -12,7 +12,7 @@ def project_page(request):
     return render(request, 'project.html')
 
 def skills_page(request):
-    return render(request, 'skills.html')
+    return render(request, 'Skills.html')
 
 def resume_page(request):
     return render(request, 'resume.html')
