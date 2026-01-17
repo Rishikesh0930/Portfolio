@@ -128,12 +128,6 @@ body {
     background: rgba(56, 189, 248, 0.18);
 }
 
-.icon-card:active {
-    transform: none;
-    background: rgba(255, 255, 255, 0.04);
-    color: #CBD5E1;
-}
-
 .icon-card i {
     font-size: 22px;
     color: #38BDF8;
@@ -258,12 +252,6 @@ body {
         -webkit-tap-highlight-color: transparent;
     }
 
-    .icon-card:active {
-        transform: none;
-        background: rgba(255, 255, 255, 0.04);
-        color: #CBD5E1;
-    }
-
     .icon-card i {
         font-size: 20px;
     }
@@ -372,12 +360,6 @@ body {
         gap: 4px;
         background: transparent;
         -webkit-tap-highlight-color: transparent;
-    }
-
-    .icon-card:active {
-        transform: none;
-        background: rgba(255, 255, 255, 0.04);
-        color: #CBD5E1;
     }
 
     .icon-card i {
