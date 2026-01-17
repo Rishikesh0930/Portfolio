@@ -8,11 +8,11 @@ def home_page(request):
 def about_page(request):
     return render(request, 'about.html')
 
-def skills_page(request):
-    return render(request, 'skills.html')
-
 def project_page(request):
     return render(request, 'project.html')
+
+def skills_page(request):
+    return render(request, 'skills.html')
 
 def resume_page(request):
     return render(request, 'resume.html')
