@@ -29,8 +29,6 @@ ALLOWED_HOSTS = ['rishikesh0930-portfolio.onrender.com']
 CSRF_TRUSTED_ORIGINS = [
     "https://rishikesh0930-portfolio.onrender.com",
 ]
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 
 
 # Application definition
