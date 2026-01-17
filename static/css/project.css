@@ -35,7 +35,6 @@ body {
     border: 1px solid rgba(56, 189, 248, 0.4);
     z-index: 10;
     transition: 0.3s;
-    font-size: 20px;
 }
 
 .back-btn:active {
@@ -408,6 +407,11 @@ body {
         -webkit-tap-highlight-color: transparent;
     }
 
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
+    }
+
     .page-title {
         font-size: 26px;
         margin-bottom: 2px;
@@ -542,7 +546,13 @@ body {
 @media (max-width:420px) {
 
     .back-btn {
+        background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
     }
 
     .project-wrapper {
@@ -607,9 +617,10 @@ body {
     .footer {
         border-top: none;
     }
-    .footer p{
-        font-size:10px;
-        color:#94A3B8;
+
+    .footer p {
+        font-size: 10px;
+        color: #94A3B8;
     }
 
     .coming-popup {
@@ -630,7 +641,7 @@ body {
         padding: 25px 30px;
         border-radius: 14px;
         text-align: center;
-        width:200px;
+        width: 200px;
         height: 140px;
         color: #fff;
         animation: scaleIn 0.3s ease;

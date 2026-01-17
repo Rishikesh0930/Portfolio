@@ -27,10 +27,9 @@ body {
     border: 1px solid rgba(56, 189, 248, 0.4);
     z-index: 10;
     transition: 0.3s;
-    font-size: 20px;
 }
 
-.back-btn:hover {
+.back-btn:active {
     background: #38BDF8;
     color: #0F172A;
 }
@@ -258,6 +257,11 @@ body {
         -webkit-tap-highlight-color: transparent;
     }
 
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
+    }
+
     .card {
         padding: 18px;
         border-radius: 14px;
@@ -282,13 +286,16 @@ body {
         font-size: 14px;
         font-weight: 600;
         min-height: 42px;
+        background: transparent;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .view-btn {
         margin-top: 0px;
         margin-bottom: -20px;
     }
-    .download-btn{
+
+    .download-btn {
         margin-bottom: 10px;
     }
 
@@ -314,9 +321,15 @@ body {
         flex-direction: column;
         justify-content: flex-start;
     }
-  
+
     .back-btn {
+        background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
     }
 
     .btn {
@@ -326,13 +339,16 @@ body {
         font-size: 14px;
         font-weight: 600;
         min-height: 42px;
+        background: transparent;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .view-btn {
         margin-top: 0px;
         margin-bottom: -20px;
     }
-    .download-btn{
+
+    .download-btn {
         margin-bottom: 10px;
     }
 

@@ -20,20 +20,20 @@ body {
 
 .back-btn {
     position: fixed;
-    top: 24px;
-    left: 80px;
+    top: 25px;
+    left: 85px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background: rgba(56, 189, 248, 0.15);
-    border: 1px solid rgba(56, 189, 248, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #F1F5F9;
     text-decoration: none;
+    border: 1px solid rgba(56, 189, 248, 0.4);
     z-index: 10;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .back-btn:active {
@@ -123,7 +123,7 @@ body {
     transition: .3s;
 }
 
-.icon-card:active{
+.icon-card:active {
     color: #0F172A;
     background-color: #0EA5E9;
 }
@@ -188,7 +188,7 @@ body {
     background: #0EA5E9;
 }
 
-.alert p{
+.alert p {
     font-size: 15px;
 }
 
@@ -201,7 +201,7 @@ body {
 }
 
 /* ================= TABLET ======================== */
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width:768px) and (max-width:1200px) {
     .contact-wrapper {
         padding: 100px 24px 40px;
     }
@@ -218,11 +218,19 @@ body {
     }
 
     .back-btn {
-        top: 16px;
-        left: 16px;
-        background: transparent;
+        top: 18px;
+        left: 18px;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
         border: none;
+        background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
     }
 
     .contact-wrapper {
@@ -272,7 +280,8 @@ body {
     .contact-card h2 {
         font-size: 18px;
     }
-    .alert p{
+
+    .alert p {
         font-size: 13px;
     }
 
@@ -283,7 +292,6 @@ body {
 }
 
 @media (max-width:420px) {
-
     html,
     body {
         height: 100%;
@@ -327,8 +335,14 @@ body {
         border-radius: 50%;
     }
 
-    .back-btn{
+    .back-btn {
+        background: transparent;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .back-btn:active {
+        background: #38BDF8;
+        color: #0F172A;
     }
 
     .contact-wrapper {
@@ -404,7 +418,7 @@ body {
         -webkit-tap-highlight-color: transparent;
     }
 
-    .alert p{
+    .alert p {
         font-size: 11px;
     }
 
@@ -415,8 +429,9 @@ body {
         font-size: 12px;
         text-align: center;
     }
-    .footer p{
-        font-size:10px;
-        color:#94A3B8;
+
+    .footer p {
+        font-size: 10px;
+        color: #94A3B8;
     }
 }
