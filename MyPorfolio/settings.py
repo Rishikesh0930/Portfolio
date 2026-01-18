@@ -26,13 +26,8 @@ SECRET_KEY = 'django-insecure-x7t#-6w@vugz!n!la5p6=e^e-qkn3&#qybobe@fg%63x$!=i0b
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
-    "https://rishikesh0930-portfolio.onrender.com",
+    "rishikesh0930-portfolio.onrender.com",
 ]
-CSRF_COOKIE_SAMESITE = "Lax"
-SESSION_COOKIE_SAMESITE = "Lax"
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
