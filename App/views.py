@@ -1,6 +1,7 @@
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.conf import settings
 
 def home_page(request):
     return render(request, 'home.html')
@@ -17,21 +18,23 @@ def skills_page(request):
 def resume_page(request):
     return render(request, 'resume.html')
 
+
 def contact_page(request):
-    try:
-        if request.method == "POST":
-            name = request.POST.get("name")
-            email = request.POST.get("email")
-            subject = request.POST.get("subject")
-            message = request.POST.get("message")
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        subject = request.POST.get("subject")
+        message = request.POST.get("message")
+        try:
             send_mail(
-                subject=f"{subject}",
-                message=f"From: {email}\n\nI'm {name}\n\n{message}",
-                from_email=email,
+                subject=subject,
+                message=f"From: {email}\nName: {name}\n\n{message}",
+                from_email=settings.EMAIL_HOST_USER,
                 recipient_list=['rishikeshkushwaha181811@gmail.com'],
                 fail_silently=False,
             )
             messages.success(request, "Your message has been sent successfully.")
-    except Exception:
-        messages.success(request, "Low internet connection! Please try again.")
+            return redirect("contact-page")
+        except Exception as e:
+            messages.error(request, "Low internet connection! Please try again.")
     return render(request, 'contact.html')
