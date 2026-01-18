@@ -23,9 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x7t#-6w@vugz!n!la5p6=e^e-qkn3&#qybobe@fg%63x$!=i0b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://rishikesh0930-portfolio.onrender.com']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,13 +53,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'MyPorfolio.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,9 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 import os
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, BASE_DIR / "static"),
     os.path.join(BASE_DIR, "assets"),
 ]
 

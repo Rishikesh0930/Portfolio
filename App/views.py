@@ -1,6 +1,7 @@
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http import HttpResponse
 from django.conf import settings
 
 def home_page(request):
@@ -29,12 +30,12 @@ def contact_page(request):
             send_mail(
                 subject=f"{subject}",
                 message=f"From: {email}\nName: {name}\n\n{message}",
-                from_email=email,
+                from_email=None,
                 recipient_list=['rishikeshkushwaha181811@gmail.com'],
                 fail_silently=False,
             )
             messages.success(request, "Your message has been sent successfully.")
             return redirect("contact-page")
-        except Exception:
-            messages.error(request, "Low internet connection! Please try again.")
+        except Exception as e:
+            return HttpResponse(f"{e}")
     return render(request, 'contact.html')
