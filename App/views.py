@@ -27,7 +27,7 @@ def contact_page(request):
         message = request.POST.get("message")
         try:
             send_mail(
-                subject=subject,
+                subject=f"{subject}",
                 message=f"From: {email}\nName: {name}\n\n{message}",
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=['rishikeshkushwaha181811@gmail.com'],
@@ -35,6 +35,6 @@ def contact_page(request):
             )
             messages.success(request, "Your message has been sent successfully.")
             return redirect("contact-page")
-        except Exception as e:
+        except Exception:
             messages.error(request, "Low internet connection! Please try again.")
     return render(request, 'contact.html')
