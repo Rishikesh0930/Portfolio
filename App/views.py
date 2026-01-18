@@ -29,7 +29,7 @@ def contact_page(request):
             send_mail(
                 subject=f"{subject}",
                 message=f"From: {email}\nName: {name}\n\n{message}",
-                from_email=settings.EMAIL_HOST_USER,
+                from_email=email,
                 recipient_list=['rishikeshkushwaha181811@gmail.com'],
                 fail_silently=False,
             )
