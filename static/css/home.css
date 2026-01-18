@@ -342,9 +342,7 @@ body {
     }
 
     .socials {
-        margin-top: -20px;
         justify-content: center;
-        gap: 22px;
     }
 
     .social {
