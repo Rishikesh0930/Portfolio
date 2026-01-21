@@ -24,6 +24,6 @@ def contact_page(request):
         email = request.POST.get("email")
         subject = request.POST.get("subject")
         message = request.POST.get("message")
-        send_mail(f"{subject}",f"{message}", f"{email}", recipient_list=['rishikeshkushwaha181811@gmail.com'], fail_silently=False)
-        messages.success(request, "Successfull!")
+        # send_mail(f"{subject}",f"{message}", f"{email}", recipient_list=['rishikeshkushwaha181811@gmail.com'], fail_silently=False)
+        # messages.success(request, "Successfull!")
     return render(request, 'contact.html')
