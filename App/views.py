@@ -42,12 +42,12 @@ def contact_page(request):
         email = request.POST.get("email", "")
         subject = request.POST.get("subject", "")
         message = request.POST.get("message", "")
-        text = f"""
-        📩 <b>Subject: </b>{subject}\n
-        📧 <b>Email: </b> {email}\n
-        👤 <b>Name: </b> {name}\n\n
-        {message}
-        """
+        text =(
+        f"📩 <b>Subject - </b>{subject}"
+        f"📧 <b>Email - </b> {email}"
+        f"👤 <b>Name - </b> {name}\n"
+        f"{message}"
+        )
         success = send_telegram_message(text)
         if success:
             messages.success(request, "Message sent successfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
