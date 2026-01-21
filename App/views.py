@@ -25,10 +25,10 @@ def contact_page(request):
         email = request.POST.get("email")
         subject = request.POST.get("subject")
         message = request.POST.get("message")
-        Subject = f"{subject}"
-        Message = f"Name: {name}\n\n{message}"
-        email_from = settings.DEFAULT_FROM_EMAIL 
-        recipient_list = [email,'rishikeshkushwaha181811@gmail.com']
-        send_mail(Subject, Message, email_from, recipient_list)
-        messages.success(request, "Successfull!")
+        # Subject = f"{subject}"
+        # Message = f"Name: {name}\n\n{message}"
+        # email_from = settings.DEFAULT_FROM_EMAIL 
+        # recipient_list = [email,'rishikeshkushwaha181811@gmail.com']
+        # send_mail(Subject, Message, email_from, recipient_list)
+        # messages.success(request, "Successfull!")
     return render(request, 'contact.html')

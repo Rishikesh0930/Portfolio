@@ -26,10 +26,6 @@ SECRET_KEY = 'django-insecure-x7t#-6w@vugz!n!la5p6=e^e-qkn3&#qybobe@fg%63x$!=i0b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['rishikesh0930-portfolio.onrender.com']
-CSRF_TRUSTED_ORIGINS = [
-    "https://rishikesh0930-portfolio.onrender.com",
-]
-
 
 
 # Application definition
@@ -129,9 +125,5 @@ STATICFILES_DIRS = [
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-import venv
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = venv("SENDGRID_API_KEY")
-DEFAULT_FROM_EMAIL = "rishikeshkushwaha181811@gmail.com"
-SENDGRID_SANDBOX_MODE_IN_DEBUG = True
