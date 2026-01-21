@@ -43,9 +43,9 @@ def contact_page(request):
         subject = request.POST.get("subject", "")
         message = request.POST.get("message", "")
         text =(
-        f"📩 <b>Subject - </b>{subject}"
-        f"📧 <b>Email - </b> {email}"
-        f"👤 <b>Name - </b> {name}\n"
+        f"📩 <b>Subject - </b>{subject}\n"
+        f"📧 <b>Email - </b> {email}\n"
+        f"👤 <b>Name - </b> {name}\n\n"
         f"{message}"
         )
         success = send_telegram_message(text)
