@@ -48,10 +48,10 @@ def contact_page(request):
             messages.success(request, "All fields are required.")
             return redirect("contact-page")
         if len(name)<3:
-            messages.success(request, "Name should between 3 and 30 characters.")
+            messages.success(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
         if len(name)>30:
-            messages.success(request, "Name should between 3 and 30 characters.")
+            messages.success(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
         if len(subject)>100:
             messages.success(request, "Subject should be less than 100 character.")
