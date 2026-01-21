@@ -54,5 +54,5 @@ def contact_page(request):
             messages.success(request, "Message sent successfully!")
         else:
             messages.success(request, "Message failed. Try again later.")
-        return redirect("contact")
+        return redirect("contact-page")
     return render(request, 'contact.html')
