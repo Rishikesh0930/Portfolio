@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Rishikesh Kushwaha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/skills.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <a href="{% url 'home-page' %}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <div class="bg-circle big-left"></div>
+    <div class="dot d1"></div>
+    <div class="dot d2"></div>
+    <section class="skills-wrapper">
+        <h1 class="page-title">🧠 My Skills</h1>
+        <p class="page-subtitle">
+            Tools & technologies I use to build real-world applications
+        </p>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>💻 Backend</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Django Framework</li>
+                    <li>Authentication & APIs (basic)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🌐 Frontend</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Responsive UI</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>🗄️ Database</h3>
+                <ul>
+                    <li>SQLite</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>⚙️ Tools</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Django Templates</li>
+                    <li>Machine Learning Models</li>
+                    <li>Visual Studio Code</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2026 All Rights Reserved | Rishikesh Kushwaha.</p>
+    </footer>
+</body>
+</html>

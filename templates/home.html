@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rishikesh Kushwaha | Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            Portfolio<span>.in</span>
+        </div>
+        <nav class="nav-links">
+            <a href="{% url 'home-page'%}">Home</a>
+            <a href="{% url 'about-page'%}">About</a>
+            <a href="{% url 'project-page'%}">Project</a>
+            <a href="{% url 'skills-page'%}">Skills</a>
+            <a href="{% url 'resume-page'%}">Resume</a>
+            <a href="{% url 'contact-page'%}">Contact</a>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="hero-content">
+            <h1>Hi👋, I'm</h1>
+            <h1 class="name">Rishikesh Kushwaha</h1>
+            <h2><span class="role">Software Developer</span></h2>
+            <p>
+                To work with an organization that gives me ample opportunities to enhance my skills 
+                and knowledge and contribute to the organization’s growth.
+            </p>
+            <div class="socials">
+                <a href="https://github.com/Rishikesh0930" class="social github"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rishikesh0930" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:rishikeshkushwaha181811@gmail.com" class="social gmail"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/A1_profile.jpeg' %}" alt="Rishikesh Kushwaha">
+        </div>
+    </section>
+<script src="{% static '/js/home.js' %}"></script>
+</body>
+</html>

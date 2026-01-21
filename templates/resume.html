@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Rishikesh Kushwaha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/resume.css' %}">
+</head>
+<body>
+    <a href="{% url 'home-page' %}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <div class="bg-circle big-left"></div>
+    <div class="bg-circle big-right"></div>
+    <div class="resume-wrapper">
+        <div class="card">
+            <h2>📄 Resume</h2>
+            <p class="resume-text">
+                Download my resume to know more about my education, skills,
+                projects and professional profile.<br>
+                A motivated developer with strong fundamentals in backend development,
+                database handling, and real-world project implementation.
+            </p>
+            <p class="resume-meta">
+                <i class="fa-regular fa-clock"></i> Last updated: Jan 2026
+            </p>
+            <ul class="resume-highlights">
+                <li><i class="fa-solid fa-check"></i> Django, Python, HTML, CSS, JavaScript</li>
+                <li><i class="fa-solid fa-check"></i> Real-world projects with clean UI</li>
+                <li><i class="fa-solid fa-check"></i> Basic knowledge of APIs</li>
+                <li><i class="fa-solid fa-check"></i> Ready for internship / entry-level role</li>
+            </ul>
+            <div class="resume-buttons">
+                <a href="{%static '/Resume_Rishikesh_010126.pdf'%}" target="_blank" class="btn view-btn">
+                    <i class="fa-regular fa-eye"></i> View Resume
+                </a>
+                <a href="{%static '/Resume_Rishikesh_010126.pdf'%}" download class="btn download-btn">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2026 All Rights Reserved | Rishikesh Kushwaha.</p>
+    </footer>
+</body>
+</html>

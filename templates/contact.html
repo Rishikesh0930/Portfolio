@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rishikesh Kushwaha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+</head>
+<body>
+    <a href="{% url 'home-page' %}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <div class="bg-circle big-left"></div>
+    <div class="dot d1"></div>
+    <div class="dot d2"></div>
+    <main class="contact-wrapper">
+        <section class="title-box">
+            <h1>Contact Me</h1>
+            <p>Let’s connect and build something meaningful</p>
+        </section>
+        <section class="contact-icons">
+            <a class="icon-card" href="https://github.com/Rishikesh0930">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a class="icon-card" href="https://www.linkedin.com/in/rishikesh0930">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a class="icon-card" href="https://wa.me/919569615658">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a class="icon-card" href="mailto:rishikeshkushwaha181811@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <span>Gmail</span>
+            </a>
+        </section>
+        {% if messages %}
+            {% for message in messages %}
+                <div id="flash-message" class="alert alert-success">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <section class="contact-card">
+            <h2>Send a Message</h2>
+            <form class="contact-form" method="POST" action="{% url 'contact-page' %}">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea rows="6" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <p>© 2026 All Rights Reserved | Rishikesh Kushwaha.</p>
+        </footer>
+    </main>
+<script src="{%static '/js/contact.js'%}"></script>
+</body>
+</html>
