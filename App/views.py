@@ -3,7 +3,6 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 import requests
 from django.core.validators import validate_email
-from django.core.exceptions import ValidationError
 
 def home_page(request):
     return render(request, 'home.html')
@@ -56,7 +55,7 @@ def contact_page(request):
         if email:
             try:
                 validate_email(email)
-            except ValidationError:
+            except Exception:
                 messages.error(request, "please Enter the valid email address.")
                 return redirect("contact-page")
         if len(subject)>100:
