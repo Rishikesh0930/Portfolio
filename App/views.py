@@ -53,6 +53,12 @@ def contact_page(request):
         if len(name)>30:
             messages.success(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
+        if email:
+            try:
+                validate_email(email)
+            except ValidationError:
+                messages.success(request, "please Enter the valid email address.")
+                return redirect("contact-page")
         if len(subject)>100:
             messages.success(request, "Subject should be less than 100 character.")
             return redirect("contact-page")
