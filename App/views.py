@@ -2,7 +2,6 @@ import os
 from django.shortcuts import render,redirect
 from django.contrib import messages
 import requests
-from django.core.validators import validate_email
 
 def home_page(request):
     return render(request, 'home.html')
@@ -46,18 +45,12 @@ def contact_page(request):
         if not all([name, email, subject, message]):
             messages.error(request, "All fields are required.")
             return redirect("contact-page")
-        if len(name)<3:
+        if len(name)<3 or len(name)>30:
             messages.error(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
-        if len(name)>30:
-            messages.error(request, "Name should be between 3 and 30 characters.")
+        if len(email)<8 or "@" not in email or "." not in email:
+            messages.error(request, "please Enter the valid email address.")
             return redirect("contact-page")
-        if email:
-            try:
-                validate_email(email)
-            except Exception:
-                messages.error(request, "please Enter the valid email address.")
-                return redirect("contact-page")
         if len(subject)>100:
             messages.error(request, "Subject should be less than 100 character.")
             return redirect("contact-page")
