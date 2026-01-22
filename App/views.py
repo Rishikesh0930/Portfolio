@@ -47,8 +47,10 @@ def contact_page(request):
         if not all([name, email, subject, message]):
             messages.error(request, "All fields are required.")
             return redirect("contact-page")
-        if (len(name)<3) and (len(name)>30):
-            popup_message = "All fields are required."
+        if len(name)<3:
+            messages.error(request, "Name should be between 3 and 30 characters.")
+            return redirect("contact-page")
+        if len(name)>30:
             messages.error(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
         if email:
@@ -71,7 +73,7 @@ def contact_page(request):
         )
         error = send_telegram_message(text)
         if error:
-            messages.error(request, "Message sent errorfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
+            messages.error(request, "Message sent successfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
         else:
             messages.error(request, "Message failed. Try again later.")
         return redirect("contact-page")
