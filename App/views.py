@@ -63,8 +63,8 @@ def contact_page(request):
         f"👤 <b>Name - </b> {name}\n\n"
         f"{message}"
         )
-        error = send_telegram_message(text)
-        if error:
+        success = send_telegram_message(text)
+        if success:
             messages.error(request, "Message sent successfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
         else:
             messages.error(request, "Message failed. Try again later.")
