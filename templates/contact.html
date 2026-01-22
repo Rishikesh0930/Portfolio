@@ -37,13 +37,6 @@
                 <span>Gmail</span>
             </a>
         </section>
-        {% if messages %}
-            {% for message in messages %}
-                <div id="flash-message" class="alert alert-success">
-                    <p>{{ message }}</p>
-                </div>
-            {% endfor %}
-        {% endif %}
         <section class="contact-card">
             <h2>Send a Message</h2>
             <form class="contact-form" method="POST" action="{% url 'contact-page' %}">
@@ -55,6 +48,19 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "error" %}
+                <div class="coming-popup" id="comingPopup">
+                    <div class="popup-box">
+                        <h3>Invalid</h3>
+                        <p>{{ message }}</p>
+                        <button onclick="closePopup()">OK</button>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
         <footer class="footer">
             <p>© 2026 All Rights Reserved | Rishikesh Kushwaha.</p>
         </footer>

@@ -45,25 +45,23 @@ def contact_page(request):
         subject = request.POST.get("subject", "")
         message = request.POST.get("message", "")
         if not all([name, email, subject, message]):
-            messages.success(request, "All fields are required.")
+            messages.error(request, "All fields are required.")
             return redirect("contact-page")
-        if len(name)<3:
-            messages.success(request, "Name should be between 3 and 30 characters.")
-            return redirect("contact-page")
-        if len(name)>30:
-            messages.success(request, "Name should be between 3 and 30 characters.")
+        if (len(name)<3) and (len(name)>30):
+            popup_message = "All fields are required."
+            messages.error(request, "Name should be between 3 and 30 characters.")
             return redirect("contact-page")
         if email:
             try:
                 validate_email(email)
             except ValidationError:
-                messages.success(request, "please Enter the valid email address.")
+                messages.error(request, "please Enter the valid email address.")
                 return redirect("contact-page")
         if len(subject)>100:
-            messages.success(request, "Subject should be less than 100 character.")
+            messages.error(request, "Subject should be less than 100 character.")
             return redirect("contact-page")
         if len(message)<30:
-            messages.success(request, "Message should be greater than 30 characters.")
+            messages.error(request, "Message should be greater than 30 characters.")
             return redirect("contact-page")      
         text =(
         f"📩 <b>Subject - </b>{subject}\n"
@@ -71,10 +69,10 @@ def contact_page(request):
         f"👤 <b>Name - </b> {name}\n\n"
         f"{message}"
         )
-        success = send_telegram_message(text)
-        if success:
-            messages.success(request, "Message sent successfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
+        error = send_telegram_message(text)
+        if error:
+            messages.error(request, "Message sent errorfully!\nIf you don’t receive a reply within 1 hour,\nplease contact me via email.")
         else:
-            messages.success(request, "Message failed. Try again later.")
+            messages.error(request, "Message failed. Try again later.")
         return redirect("contact-page")
     return render(request, 'contact.html')
