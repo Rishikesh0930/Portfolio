@@ -1,0 +1,38 @@
+{
+    "title": "Contact Me",
+    "content": "Let’s connect and build something meaningful",
+
+    "contact_cards": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/Rishikesh0930",
+            "icon": "fab fa-github"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/rishikesh0930",
+            "icon": "fab fa-linkedin-in"
+        },
+        {
+            "name": "WhatsApp",
+            "url": "https://wa.me/919569615658",
+            "icon": "fab fa-whatsapp"
+        },
+        {
+            "name": "Gmail",
+            "url": "mailto:rishikeshkushwaha181811@gmail.com",
+            "icon": "fas fa-envelope"
+        }
+    ],
+
+    "form": {
+        "title": "Send a Message",
+        "btn": "Send Message"
+    },
+
+    "alert": {
+        "title": "Invalid",
+        "btn": "OK"
+    }
+
+}

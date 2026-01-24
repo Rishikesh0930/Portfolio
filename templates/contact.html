@@ -16,36 +16,26 @@
     <div class="dot d2"></div>
     <main class="contact-wrapper">
         <section class="title-box">
-            <h1>Contact Me</h1>
-            <p>Let’s connect and build something meaningful</p>
+            <h1>{{ contact.title }}</h1>
+            <p>{{ contact.content }}</p>
         </section>
         <section class="contact-icons">
-            <a class="icon-card" href="https://github.com/Rishikesh0930">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
-            <a class="icon-card" href="https://www.linkedin.com/in/rishikesh0930">
-                <i class="fab fa-linkedin-in"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a class="icon-card" href="https://wa.me/919569615658">
-                <i class="fab fa-whatsapp"></i>
-                <span>WhatsApp</span>
-            </a>
-            <a class="icon-card" href="mailto:rishikeshkushwaha181811@gmail.com">
-                <i class="fas fa-envelope"></i>
-                <span>Gmail</span>
-            </a>
+            {% for link_item in contact.contact_cards %}
+                <a class="icon-card" href="{{ link_item.url}}">
+                    <i class="{{ link_item.icon }}"></i>
+                    <span>{{link_item.name }}</span>
+                </a>
+            {% endfor %}
         </section>
         <section class="contact-card">
-            <h2>Send a Message</h2>
+            <h2>{{ contact.form.title }}</h2>
             <form class="contact-form" method="POST" action="{% url 'contact-page' %}">
                 {% csrf_token %}
                 <input type="text" name="name" placeholder="Your Name">
                 <input type="email" name="email" placeholder="Your Email">
                 <input type="text" name="subject" placeholder="Subject">
                 <textarea rows="6" name="message" placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">{{ contact.form.btn }}</button>
             </form>
         </section>
         {% if messages %}
@@ -53,9 +43,9 @@
                 {% if message.tags == "error" %}
                 <div class="coming-popup" id="comingPopup">
                     <div class="popup-box">
-                        <h3>Invalid</h3>
+                        <h3>{{ contact.alert.title}}</h3>
                         <p>{{ message }}</p>
-                        <button onclick="closePopup()">OK</button>
+                        <button onclick="closePopup()">{{ contact.alert.btn }}</button>
                     </div>
                 </div>
                 {% endif %}
