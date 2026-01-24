@@ -1,0 +1,102 @@
+{
+    "about_me": [
+        {
+            "title": "💻 About Me",
+            "content": " I am a passionate and detail-oriented developer with a strong interest in building modern web applications and AI-ML Based applications. I enjoy transforming ideas into real-world solutions using technologies like Python, Django, Deep learning models, HTML, CSS, and JavaScript. I am always eager to learn new tools, improve my skills, and create projects that are both functional and user-friendly."
+        }
+    ],
+
+    "career_obj": [
+        {
+            "title": "🎯 Career Objective",
+            "content": "To work with an organization that gives me ample opportunities to enhance my skills and knowledge and contribute to the organization’s growth."
+        }
+    ],
+
+    "skills": [
+        {
+            "title": "🧠 Skills Highlights"
+        },
+        {
+            "content": "Python"
+        },
+        {
+            "content": "Django"
+        },
+        {
+            "content": "C++"
+        },
+        {
+            "content": "MySQL"
+        },
+        {
+            "content": "HTML & CSS"
+        },
+        {
+            "content": "DSA"
+        },
+        {
+            "content": "JavaScript"
+        },
+        {
+            "content": "Git & GitHub"
+        },
+        {
+            "content": "Full-Stack Developmen"
+        },
+        {
+            "content": "Desktop Applictions Development"
+        }
+    ],
+
+    "project": [
+        {
+            "title": "🚀 Project Highlights"
+        },
+        {
+            "content": "🎥 AI Powered - Live Vision"
+        },
+        {
+            "content": "🤖 Voice Assistant"
+        },
+        {
+            "content": "🌦️ Weather App"
+        }
+    ],
+
+    "education": [
+        {
+            "title": "🎓 Education"
+        },
+        {
+            "content": "Bachelor of Technology (B.Tech)"
+        },
+        {
+            "content": "Computer Science & Engineering (AI-ML)"
+        },
+        {
+            "content": "Buddha Institute of Technology"
+        },
+        {
+            "content": "2022 – 2026"
+        }
+    ],
+
+    "strength": [
+        {
+            "title": "⭐ Strengths"
+        },
+        {
+            "content": "Quick learner"
+        },
+        {
+            "content": "Punctual"
+        },
+        {
+            "content": "Consistent"
+        },
+        {
+            "content": "Good Communication"
+        }
+    ]
+}

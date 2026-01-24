@@ -17,62 +17,48 @@
     <div class="dot d2"></div>
     <div class="about-wrapper">
         <div class="card">
-            <h2>💻 About Me</h2>
-            <p>
-                I am a passionate and detail-oriented developer with a strong interest in building 
-                modern web applications and AI-ML Based applications. I enjoy transforming ideas into 
-                real-world solutions using technologies like Python, Django, Deep learning models, HTML, 
-                CSS, and JavaScript. I am always eager to learn new tools, improve my skills, and 
-                create projects that are both functional and user-friendly.
-            </p>
+            {% for about_item in about.about_me %}
+                <h2>{{ about_item.title }}</h2>
+                <p>{{ about_item.content }}</p>
+            {% endfor %}
         </div>
         <div class="card">
-            <h2>🎯 Career Objective</h2>
-            <p> 
-                To work with an organization that gives me ample opportunities to enhance my skills 
-                and knowledge and contribute to the organization’s growth.
-            </p>
+            {% for career_obj_item in about.career_obj %}
+                <h2>{{ career_obj_item.title }}</h2>
+                <p>{{ career_obj_item.content }}</p>
+            {% endfor %}
         </div>
         <div class="card">
-            <h2>🧠 Skills Highlights</h2>
-            <div class="skills">
-                <span>🟢 Python</span>
-                <span>🟢 Django</span>
-                <span>🟢 C++</span>
-                <span>🟢 MySQL</span>
-                <span>🟢 HTML & CSS</span>
-                <span>🟢 DSA</span>
-                <span>🟢 JavaScript</span>
-                <span>🟢 Git & GitHub</span>
-                <span>🟢 Full-Stack Development</span>
-                <span>🟢 Desktop Applictions Development</span>
-            </div>
+            {% for skills_item in about.skills %}
+                <h2>{{ skills_item.title }}</h2>
+                <div class="skills">
+                    <span>🟢 {{ skills_item.content }}</span>
+                </div>
+            {% endfor %}
         </div>
         <div class="card">
-            <h2>🚀 Project Highlights</h2>
-            <ul>
-                <li>🎥 AI Powered - Multi Classification Detection System (LiveVision)</li>
-                <li>🤖 Voice Assistant</li>
-                <li>🌦️ Weather App</li>
-            </ul>
+            {% for project_item in about.project %}
+                <h2>{{ project_item.title }}</h2>
+                <ul>
+                    <li>{{ project_item.content }}</li>
+                </ul>
+            {% endfor %}
         </div>
         <div class="card">
-            <h2>🎓 Education</h2>
-            <ul> 
-                <li> Bachelor of Technology (B.Tech)</li>
-                <li> Computer Science & Engineering (AI-ML)</li>
-                <li> Buddha Institute of Technology</li>
-                <li> 2022 – 2026</li>
-            </ul>
+            {% for education_item in about.education %}
+                <h2>{{ education_item.title }}</h2>
+                <ul> 
+                    <li>{{ education_item.content }}</li>
+                </ul>
+            {% endfor %}
         </div>
         <div class="card">
-            <h2>⭐ Strengths</h2>
-            <ul>
-                <li> Quick learner</li>
-                <li> Punctual</li>
-                <li> Consistent</li>
-                <li> Good Communication</li>
-            </ul>
+            {% for strength_item in about.strength %}
+                <h2>{{ strength_item.title }}</h2>
+                <ul>
+                    <li>{{ strength_item.content }}</li>
+                </ul>
+            {% endfor %}
         </div>
     </div>
     <footer class="footer">

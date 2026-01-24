@@ -6,13 +6,16 @@ import requests
 import json
 
 def home_page(request):
-    json_file_path = os.path.join(settings.BASE_DIR, 'static/json/home.json')
-    with open(json_file_path, 'r', encoding='utf-8') as f:
+    json_file_home = os.path.join(settings.BASE_DIR, 'static/json/home.json')
+    with open(json_file_home, 'r', encoding='utf-8') as f:
         home = json.load(f)
     return render(request, 'home.html', {"home": home})
 
 def about_page(request):
-    return render(request, 'about.html')
+    json_file_about = os.path.join(settings.BASE_DIR, 'static/json/about.json')
+    with open(json_file_about, 'r', encoding='utf-8') as f:
+        about = json.load(f)
+    return render(request, 'about.html', {"about": about})
 
 def project_page(request):
     return render(request, 'project.html')
