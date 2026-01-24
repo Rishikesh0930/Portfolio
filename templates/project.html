@@ -16,40 +16,56 @@
     <div class="dot d1"></div>
     <div class="dot d2"></div>
     <div class="project-wrapper">
-        <h1 class="page-title">🚀 My Projects</h1>
-        <p class="page-subtitle">
-            A collection of projects that reflect my learning, skills, and practical experience.
-        </p>
+        <h1 class="page-title">{{ project.title }}</h1>
+        <p class="page-subtitle">{{ project.subtitle }}</p>
         <div class="card">
             <div class="card-slider">
                 <div class="slider-track">
-                    <img src="{% static 'images/Lv1.png' %}" alt="">
-                    <img src="{% static 'images/Lv2.png' %}" alt="">
-                    <img src="{% static 'images/Lv3.png' %}" alt="">
+                    {% for img in project.lv_image.lv_img %}
+                        <img src="{% static img %}" alt="">
+                    {% endfor %}
                 </div>
             </div>
-            <h2>🎥 Live Vision</h2>
+            <h2>{{ project.lv_image.title }}</h2>
             <div class="project-content">
-                <p>
-                    The proposed system, “Live Vision” is an intelligent computer vision–based platform designed 
-                    to detect and classify multiple object categories in real-time video streams. The system processes
-                    live video input from cameras or video files and applies deep learning models to accurately 
-                    identify and label objects across multiple predefined classes simultaneously. 
-                </p>
+                <p>{{ project.lv_image.content }}</p>
                 <div class="project-tech">
-                    <span>Python</span>
-                    <span>OpenCV</span>
-                    <span>Django</span>
-                    <span>Deep Learning</span>
-                    <span>Web Application</span>
+                    {% for lang in project.lv_image.language %}
+                        <span>{{ lang }}</span>
+                    {% endfor %}
                 </div>
             </div>
             <div class="project-actions">
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i> Live Demo
+                    <i class="fas fa-play"></i>{{ project.live_btn }}
                 </button>
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i> Source Code
+                    <i class="fab fa-github"></i>{{ project.code_btn }}
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-slider">
+                {% for img in project.va_image.va_img %}
+                    <img src="{% static img %}" alt="">
+                {% endfor %}
+            </div>
+            <h2>{{ project.va_image.title }}</h2>
+            <div class="project-content">
+                <p>{{ project.va_image.content }}</p>
+                <div class="project-tech">
+                    {% for lang in project.va_image.language %}
+                        <span>{{ lang }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="project-actions">
+                <button class="btn primary" onclick="comingSoon()">
+                    <i class="fas fa-play"></i>{{ project.live_btn }}
+                </button>
+                <button class="btn primary" onclick="comingSoon()">
+                    <i class="fab fa-github"></i>{{ project.code_btn }}
                 </button>
             </div>
         </div>
@@ -57,68 +73,34 @@
         <div class="card">
             <div class="card-slider">
                 <div class="slider-track">
-                    <img src="{% static 'images/va1.png' %}" alt="">
-                    <img src="{% static 'images/va2.png' %}" alt="">
-                    <img src="{% static 'images/va3.png' %}" alt="">
+                    {% for img in project.wa_image.wa_img %}
+                        <img src="{% static img %}" alt="">
+                    {% endfor %}
                 </div>
             </div>
-            <h2>🤖 Voice Assistant</h2>
+            <h2>{{ project.wa_image.title }}</h2>
             <div class="project-content">
-                <p>
-                    An intelligent voice-controlled assistant that listens, understands,
-                    and responds to user commands and you can click keybord buttons through the voice command.
-                </p>
+                <p>{{ project.wa_image.content }}</p>
                 <div class="project-tech">
-                    <span>Python</span>
-                    <span>Speech Recognition</span>
-                    <span>PyAudio</span>
+                    {% for lang in project.wa_image.language %}
+                        <span>{{ lang }}</span>
+                    {% endfor %}
                 </div>
             </div>
             <div class="project-actions">
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i> Live Demo
+                    <i class="fas fa-play"></i>{{ project.live_btn }}
                 </button>
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i> Source Code
-                </button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-slider">
-                <div class="slider-track">
-                    <img src="{% static 'images/wa1.png' %}" alt="">
-                    <img src="{% static 'images/wa2.png' %}" alt="">
-                    <img src="{% static 'images/wa3.png' %}" alt="">
-                </div>
-            </div>
-            <h2>🌦️ Weather App</h2>
-            <div class="project-content">
-                <p>
-                    A clean and responsive weather Desktop application that provides real-time
-                    weather updates based on location or city search.
-                </p>
-                <div class="project-tech">
-                    <span>Tkinter</span>
-                    <span>CTkinter</span>
-                    <span>Python</span>
-                    <span>Weather API</span>
-                </div>
-            </div>
-            <div class="project-actions">
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i> Live Demo
-                </button>
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i> Source Code
+                    <i class="fab fa-github"></i>{{ project.code_btn }}
                 </button>
             </div>
         </div>
         <div class="coming-popup" id="comingPopup">
             <div class="popup-box">
-                <h3>Coming Soon</h3>
-                <p>This feature will be available soon.</p>
-                <button onclick="closePopup()">OK</button>
+                <h3>{{ project.popup_msg.title }}</h3>
+                <p>{{ project.popup_msg.msg }}</p>
+                <button onclick="closePopup()">{{ project.popup_msg.btn }}</button>
             </div>
         </div>
     </div>

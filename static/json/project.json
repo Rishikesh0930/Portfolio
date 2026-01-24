@@ -1,0 +1,68 @@
+{
+    "title": "🚀 My Projects",
+    "subtitle": " A collection of projects that reflect my learning, skills, and practical experience.",
+
+    "lv_image": {
+        "title": "🎥 Live Vision",
+        "content": "The proposed system, “Live Vision” is an intelligent computer vision–based platform designed to detect and classify multiple object categories in real-time video streams. The system processes live video input from cameras or video files and applies deep learning models to accurately identify and label objects across multiple predefined classes simultaneously.",
+
+        "lv_img": [
+            "images/Lv1.png",
+            "images/Lv2.png",
+            "images/Lv2.png"
+        ],
+
+        "language": [
+            "Python",
+            "OpenCV",
+            "Django",
+            "Deep Learning",
+            "Web Application"
+        ]
+    },
+
+    "va_image": {
+        "title": "🤖 Voice Assistant",
+        "content": "An intelligent voice-controlled assistant that listens, understands and responds to user commands and you can click keybord buttons through the voice command.",
+        
+        "va_img": [
+            "images/va1.png",
+            "images/va2.png",
+            "images/va2.png"
+        ],
+
+        "language": [
+            "Python",
+            "Speech Recognition",
+            "PyAudio"
+        ]
+    },
+
+    "wa_image": {
+        "title": "🌦️ Weather App",
+        "content": "A clean and responsive weather Desktop application that provides real-time weather updates based on location or city search.",
+        
+        "wa_img": [
+            "images/wa1.png",
+            "images/wa2.png",
+            "images/wa2.png"
+        ],
+
+        "language": [
+            "Python",
+            "Tkinter",
+            "CTkinter",
+            "Weather API"
+        ]
+    },
+
+    "live_btn": "Live Demo",
+    "code_btn": "Source Code",
+
+    "popup_msg": {
+        "title": "Coming Soon",
+        "msg": "This feature will be available soon.",
+        "btn": "OK"
+    }
+
+}
