@@ -15,28 +15,20 @@
     <div class="bg-circle big-right"></div>
     <div class="resume-wrapper">
         <div class="card">
-            <h2>📄 Resume</h2>
-            <p class="resume-text">
-                Download my resume to know more about my education, skills,
-                projects and professional profile.<br>
-                A motivated developer with strong fundamentals in backend development,
-                database handling, and real-world project implementation.
-            </p>
-            <p class="resume-meta">
-                <i class="fa-regular fa-clock"></i> Last updated: Jan 2026
-            </p>
+            <h2>{{ resume.title }}</h2>
+            <p class="resume-text">{{ resume.content }}</p>
+            <p class="resume-meta"><i class="{{ resume.clock_icon}}"></i>{{ clock_info }}</p>
             <ul class="resume-highlights">
-                <li><i class="fa-solid fa-check"></i> Django, Python, HTML, CSS, JavaScript</li>
-                <li><i class="fa-solid fa-check"></i> Real-world projects with clean UI</li>
-                <li><i class="fa-solid fa-check"></i> Basic knowledge of APIs</li>
-                <li><i class="fa-solid fa-check"></i> Ready for internship / entry-level role</li>
+                {% for highlights_item in resume.highlights %}
+                    <li><i class="{{ highlights_item.icon }}"></i>{{ highlights_item }}</li>
+                {% endfor %}
             </ul>
             <div class="resume-buttons">
                 <a href="{%static '/Resume_Rishikesh_010126.pdf'%}" target="_blank" class="btn view-btn">
-                    <i class="fa-regular fa-eye"></i> View Resume
+                    <i class="{{ resume.view_icon }}"></i>{{ resume.view_btn }}
                 </a>
                 <a href="{%static '/Resume_Rishikesh_010126.pdf'%}" download class="btn download-btn">
-                    <i class="fa-solid fa-download"></i> Download Resume
+                    <i class="{{ resume.download_icon}}"></i>{{ resume.download_btn }}
                 </a>
             </div>
         </div>

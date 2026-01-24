@@ -16,7 +16,7 @@
         {% endfor %}
         <nav class="nav-links">
             {% for nav_item in home.navbar %}
-                <a href="{% url nav_item.url_name %}">{{  nav_item.name  }}</a>
+                <a href="{% url nav_item.url_name %}">{{ nav_item.name }}</a>
             {% endfor %}
         </nav>
         <div class="menu-toggle">

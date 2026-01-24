@@ -1,0 +1,21 @@
+{
+    "title": "📄 Resume",
+    "content": "Download my resume to know more about my education, skills, projects and professional profile.<br>A motivated developer with strong fundamentals in backend development, database handling, and real-world project implementation.",
+    "clock_icon": "fa-regular fa-clock",
+    "clock_info": "Last updated: Jan 2026",
+
+    "highlights": [
+        "Django, Python, HTML, CSS, JavaScript",
+        "Real-world projects with clean UI",
+        "Basic knowledge of APIs",
+        "Ready for internship / entry-level role",
+        {
+            "icon": "fa-solid fa-check"
+        }
+    ],
+
+    "view_btn": "View Resume",
+    "view_icon": "fa-regular fa-eye",
+    "download_btn": "Download Resume",
+    "download_icon": "fa-solid fa-download"
+}

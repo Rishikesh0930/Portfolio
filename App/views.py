@@ -24,7 +24,10 @@ def skills_page(request):
     return render(request, 'Skills.html')
 
 def resume_page(request):
-    return render(request, 'resume.html')
+    json_file_resume = os.path.join(settings.BASE_DIR, 'static/json/resume.json')
+    with open(json_file_resume, 'r', encoding='utf-8') as f:
+        resume = json.load(f)
+    return render(request, 'resume.html', {"resume": resume})
 
 def send_telegram_message(text):
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -69,9 +72,9 @@ def contact_page(request):
             messages.error(request, "Message should be greater than 30 characters.")
             return redirect("contact-page")      
         text =(
-        f"📩 <b>Subject - </b>{subject}\n"
-        f"📧 <b>Email - </b> {email}\n"
-        f"👤 <b>Name - </b> {name}\n\n"
+        f"<b>Subject - </b>{subject}\n"
+        f"<b>Email - </b> {email}\n"
+        f"<b>Name - </b> {name}\n\n"
         f"{message}"
         )
         success = send_telegram_message(text)
