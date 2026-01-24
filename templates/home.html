@@ -30,7 +30,7 @@
         <div class="hero-content">
             {% for page_item in home.content %}
                 <h1>{{ page_item.subname }}</h1>
-                <h1 class="name">{{ item.name }}</h1>
+                <h1 class="name">{{ page_item.name }}</h1>
                 <h2><span class="role">{{ page_item.role }}</span></h2>
                 <p>{{ page_item.objective }}</p>
             {% endfor %}
