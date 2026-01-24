@@ -18,7 +18,10 @@ def about_page(request):
     return render(request, 'about.html', {"about": about})
 
 def project_page(request):
-    return render(request, 'project.html')
+    json_file_project = os.path.join(settings.BASE_DIR, 'static/json/project.json')
+    with open(json_file_project, 'r', encoding='utf-8') as f:
+        project = json.load(f)
+    return render(request, 'project.html', {"project": project})
 
 def skills_page(request):
     json_file_skills = os.path.join(settings.BASE_DIR, 'static/json/skills.json')
