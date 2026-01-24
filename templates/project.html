@@ -47,9 +47,11 @@
 
         <div class="card">
             <div class="card-slider">
-                {% for img in project.va_image.va_img %}
-                    <img src="{% static img %}" alt="">
-                {% endfor %}
+                <div class="slider-track">
+                    {% for img in project.va_image.va_img %}
+                        <img src="{% static img %}" alt="">
+                    {% endfor %}
+                </div>
             </div>
             <h2>{{ project.va_image.title }}</h2>
             <div class="project-content">
