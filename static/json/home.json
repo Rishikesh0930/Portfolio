@@ -1,4 +1,10 @@
 {
+    "shape": [
+        "shape shape1",
+        "shape shape2",
+        "shape shape3"
+    ], 
+    
     "navbar": [
         {
             "name": "Home",
@@ -39,9 +45,21 @@
     
     "social_links": [
         {
-            "github": "https://github.com/Rishikesh0930",
-            "linkedin": "https://www.linkedin.com/in/rishikesh0930",
-            "gmail": "mailto:rishikeshkushwaha181811@gmail.com"
+            "url": "https://github.com/Rishikesh0930",
+            "name": "social github",
+            "icon": "fab fa-github"
+            
+        },
+        {
+            "url": "https://www.linkedin.com/in/rishikesh0930",
+            "name": "social linkedin",
+            "icon": "fab fa-linkedin-in"
+        
+        },
+        {
+            "url": "mailto:rishikeshkushwaha181811@gmail.com",
+            "name": "social gmail",
+            "icon": "fas fa-envelope"
         }
     ]
 }
