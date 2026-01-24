@@ -11,10 +11,12 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">{{home.content.sublogo}}<span>{{home.content.logo}}</span></div>
+        {% for page_item in home.content %}
+            <div class="logo">{{ page_item.sublogo }}<span>{{ page_item.logo }}</span></div>
+        {% endfor %}
         <nav class="nav-links">
-            {% for item in home.navbar %}
-                <a href="{% url item.url_name %}">{{ item.name }}</a>
+            {% for nav_item in home.navbar %}
+                <a href="{% url nav_item.url_name %}">{{  nav_item.name  }}</a>
             {% endfor %}
         </nav>
         <div class="menu-toggle">
@@ -26,14 +28,18 @@
         <div class="shape shape2"></div>
         <div class="shape shape3"></div>
         <div class="hero-content">
-            <h1>{{home.content.subname}}</h1>
-            <h1 class="name">{{home.content.name}}</h1>
-            <h2><span class="role">{{home.content.role}}</span></h2>
-            <p>{{home.content.objective}}</p>
+            {% for page_item in home.content %}
+                <h1>{{ page_item.subname }}</h1>
+                <h1 class="name">{{ item.name }}</h1>
+                <h2><span class="role">{{ page_item.role }}</span></h2>
+                <p>{{ page_item.objective }}</p>
+            {% endfor %}
             <div class="socials">
-                <a href="{{home.social_links.github}}" class="social github"><i class="fab fa-github"></i></a>
-                <a href="{{home.social_links.linkedin}}" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="{{home.social_links.gmail}}" class="social gmail"><i class="fas fa-envelope"></i></a>
+                {% for social_item in home.social_links %}
+                    <a href="{{ social_item.github }}" class="social github"><i class="fab fa-github"></i></a>
+                    <a href="{{ social_item.linkedin }}" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ social_item.gmail }}" class="social gmail"><i class="fas fa-envelope"></i></a>
+                {% endfor %}
             </div>
         </div>
         <div class="hero-image">
