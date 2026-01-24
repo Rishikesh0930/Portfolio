@@ -29,36 +29,36 @@
             {% endfor %}
         </div>
         <div class="card">
-            {% for skills_item in about.skills %}
-                <h2>{{ skills_item.title }}</h2>
-                <div class="skills">
+            <h2>{{ skills_item.0.title }}</h2>
+            <div class="skills">
+                {% for skills_item in about.skills %}
                     <span>🟢 {{ skills_item.content }}</span>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
         <div class="card">
-            {% for project_item in about.project %}
-                <h2>{{ project_item.title }}</h2>
-                <ul>
+            <h2>{{ project_item.0.title }}</h2>
+            <ul>
+                {% for project_item in about.project %}
                     <li>{{ project_item.content }}</li>
-                </ul>
-            {% endfor %}
+                {% endfor %}
+            </ul>
         </div>
         <div class="card">
-            {% for education_item in about.education %}
-                <h2>{{ education_item.title }}</h2>
-                <ul> 
+            <h2>{{ education_item.0.title }}</h2>
+            <ul> 
+                {% for education_item in about.education %}
                     <li>{{ education_item.content }}</li>
+                {% endfor %}
                 </ul>
-            {% endfor %}
         </div>
         <div class="card">
-            {% for strength_item in about.strength %}
-                <h2>{{ strength_item.title }}</h2>
-                <ul>
+            <h2>{{ strength_item.0.title }}</h2>
+            <ul>
+                {% for strength_item in about.strength %}
                     <li>{{ strength_item.content }}</li>
-                </ul>
-            {% endfor %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
     <footer class="footer">
