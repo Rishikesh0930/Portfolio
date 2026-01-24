@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rishikesh Kushwaha | Software Developer</title>
+    <title>{{home.content.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
@@ -11,16 +11,11 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">
-            Portfolio<span>.in</span>
-        </div>
+        <div class="logo">{{home.content.sublogo}}<span>{{home.content.logo}}</span></div>
         <nav class="nav-links">
-            <a href="{% url 'home-page'%}">Home</a>
-            <a href="{% url 'about-page'%}">About</a>
-            <a href="{% url 'project-page'%}">Project</a>
-            <a href="{% url 'skills-page'%}">Skills</a>
-            <a href="{% url 'resume-page'%}">Resume</a>
-            <a href="{% url 'contact-page'%}">Contact</a>
+            {% for item in home.navbar %}
+                <a href="{% url item.url_name %}">{{ item.name }}</a>
+            {% endfor %}
         </nav>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -31,17 +26,14 @@
         <div class="shape shape2"></div>
         <div class="shape shape3"></div>
         <div class="hero-content">
-            <h1>Hi👋, I'm</h1>
-            <h1 class="name">Rishikesh Kushwaha</h1>
-            <h2><span class="role">Software Developer</span></h2>
-            <p>
-                To work with an organization that gives me ample opportunities to enhance my skills 
-                and knowledge and contribute to the organization’s growth.
-            </p>
+            <h1>{{home.content.subname}}</h1>
+            <h1 class="name">{{home.content.name}}</h1>
+            <h2><span class="role">{{home.content.role}}</span></h2>
+            <p>{{home.content.objective}}</p>
             <div class="socials">
-                <a href="https://github.com/Rishikesh0930" class="social github"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rishikesh0930" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:rishikeshkushwaha181811@gmail.com" class="social gmail"><i class="fas fa-envelope"></i></a>
+                <a href="{{home.social_links.github}}" class="social github"><i class="fab fa-github"></i></a>
+                <a href="{{home.social_links.linkedin}}" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="{{home.social_links.gmail}}" class="social gmail"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
         <div class="hero-image">

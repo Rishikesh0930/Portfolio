@@ -1,10 +1,15 @@
 import os
+from django.conf import settings
 from django.shortcuts import render,redirect
 from django.contrib import messages
 import requests
+import json
 
 def home_page(request):
-    return render(request, 'home.html')
+    json_file_path = os.path.join(settings.BASE_DIR, 'static/json/home.json')
+    with open(json_file_path, 'r', encoding='utf-8') as f:
+        home = json.load(f)
+    return render(request, 'home.html', {"home": home})
 
 def about_page(request):
     return render(request, 'about.html')
