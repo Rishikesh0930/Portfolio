@@ -14,5 +14,6 @@
     "view_btn": "View Resume",
     "view_icon": "fa-regular fa-eye",
     "download_btn": "Download Resume",
-    "download_icon": "fa-solid fa-download"
+    "download_icon": "fa-solid fa-download",
+    "footer": "© 2026 All Rights Reserved | Rishikesh Kushwaha."
 }
