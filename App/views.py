@@ -45,7 +45,7 @@ def send_telegram_message(text):
         return False
 
 def contact_page(request):
-    json_file_contact = os.path.join(settings.BASE_DIR, 'static/json/about.json')
+    json_file_contact = os.path.join(settings.BASE_DIR, 'static/json/contact.json')
     with open(json_file_contact, 'r', encoding='utf-8') as f:
         contact = json.load(f)
     if request.method == "POST":
