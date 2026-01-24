@@ -9,7 +9,7 @@
         "lv_img": [
             "images/Lv1.png",
             "images/Lv2.png",
-            "images/Lv2.png"
+            "images/Lv3.png"
         ],
 
         "language": [
@@ -28,7 +28,7 @@
         "va_img": [
             "images/va1.png",
             "images/va2.png",
-            "images/va2.png"
+            "images/va3.png"
         ],
 
         "language": [
@@ -45,7 +45,7 @@
         "wa_img": [
             "images/wa1.png",
             "images/wa2.png",
-            "images/wa2.png"
+            "images/wa3.png"
         ],
 
         "language": [
