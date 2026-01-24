@@ -30,8 +30,8 @@ body {
 }
 
 .back-btn:active {
-    background: #38BDF8;
-    color: #0F172A;
+    background: #141f38;
+    color: #38BDF8;
 }
 
 .bg-circle {
@@ -254,8 +254,8 @@ body {
     }
 
     .back-btn:active {
-        background: #38BDF8;
-        color: #0F172A;
+        background: #1b294b;
+        color: #38BDF8;
     }
 
     .card {
@@ -323,8 +323,8 @@ body {
     }
 
     .back-btn:active {
-        background: #38BDF8;
-        color: #0F172A;
+        background: #1b294b;
+        color: #38BDF8;
     }
 
     .btn {
