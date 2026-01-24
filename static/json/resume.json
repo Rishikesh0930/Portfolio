@@ -8,10 +8,7 @@
         "Django, Python, HTML, CSS, JavaScript",
         "Real-world projects with clean UI",
         "Basic knowledge of APIs",
-        "Ready for internship / entry-level role",
-        {
-            "icon": "fa-solid fa-check"
-        }
+        "Ready for internship / entry-level role"
     ],
 
     "view_btn": "View Resume",
