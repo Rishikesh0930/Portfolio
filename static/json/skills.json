@@ -1,0 +1,47 @@
+{
+    "circle": [
+        "dot d1",
+        "dot d2"
+    ],
+
+    "title": "🧠 My Skills",
+    "subtitle": "Tools & technologies I use to build real-world applications",
+
+    "frontend": {
+        "title": "💻 Frontend",
+        "frontend_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Tkinter"
+        ]
+    }, 
+
+    "backend": {
+        "title": "💻 Backend",
+        "backend_skills": [
+            "Python",
+            "Django Framework",
+            "Authentication & APIs"
+        ]
+    }, 
+
+    "database": {
+        "title": "🗄️ Database",
+        "database_skills": [
+            "SQLite",
+            "MySQL",
+            "PostgreSQL"
+        ]
+    }, 
+
+    "tools": {
+        "title": "⚙️ Tools",
+        "tools_skills": [
+            "Git & GitHub",
+            "Django Templates",
+            "Machine Learning Models",
+            "Visual Studio Code"
+        ]
+    }
+}

@@ -12,46 +12,43 @@
 <body>
     <a href="{% url 'home-page' %}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
     <div class="bg-circle big-left"></div>
-    <div class="dot d1"></div>
-    <div class="dot d2"></div>
+    {% for dot in skills.circle%}
+        <div class="{{ dot }}"></div>
+    {% endfor %}
     <section class="skills-wrapper">
-        <h1 class="page-title">🧠 My Skills</h1>
-        <p class="page-subtitle">
-            Tools & technologies I use to build real-world applications
-        </p>
+        <h1 class="page-title">{{ skills.title }}</h1>
+        <p class="page-subtitle">{{ skills.subtitle }}</p>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>💻 Backend</h3>
+                <h3>{{ skills.frontend.title }}</h3>
                 <ul>
-                    <li>Python</li>
-                    <li>Django Framework</li>
-                    <li>Authentication & APIs (basic)</li>
+                    {%for item in skills.frontend_skills %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>🌐 Frontend</h3>
+                <h3>{{ skills.backend.title }}</h3>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Responsive UI</li>
+                    {%for item in skills.backend_skills %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>🗄️ Database</h3>
+                <h3>{{ skills.database.title }}</h3>
                 <ul>
-                    <li>SQLite</li>
-                    <li>MySQL</li>
-                    <li>PostgreSQL</li>
+                    {%for item in skills.database_skills %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>⚙️ Tools</h3>
+                <h3>{{ skills.tools.title }}</h3>
                 <ul>
-                    <li>Git & GitHub</li>
-                    <li>Django Templates</li>
-                    <li>Machine Learning Models</li>
-                    <li>Visual Studio Code</li>
+                    {%for item in skills.tools_skills %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

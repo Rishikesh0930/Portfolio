@@ -21,7 +21,10 @@ def project_page(request):
     return render(request, 'project.html')
 
 def skills_page(request):
-    return render(request, 'Skills.html')
+    json_file_skills = os.path.join(settings.BASE_DIR, 'static/json/skills.json')
+    with open(json_file_skills, 'r', encoding='utf-8') as f:
+        skills = json.load(f)
+    return render(request, 'Skills.html', {"skills": skills})
 
 def resume_page(request):
     json_file_resume = os.path.join(settings.BASE_DIR, 'static/json/resume.json')
@@ -60,7 +63,7 @@ def contact_page(request):
             messages.error(request, "All fields are required.")
             return redirect("contact-page")
         if len(name)<3 or len(name)>30:
-            messages.error(request, "Name should be between 3 and 30 characters.")
+            messages.error(request, "Name should be between 3 and 30 characters and only alphabets.")
             return redirect("contact-page")
         if len(email)<8 or "@" not in email or "." not in email:
             messages.error(request, "please Enter the valid email address.")
