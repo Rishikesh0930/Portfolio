@@ -24,7 +24,7 @@ def skills_page(request):
     json_file_skills = os.path.join(settings.BASE_DIR, 'static/json/skills.json')
     with open(json_file_skills, 'r', encoding='utf-8') as f:
         skills = json.load(f)
-    return render(request, 'Skills.html', {"skills": skills})
+    return render(request, 'skills.html', {"skills": skills})
 
 def resume_page(request):
     json_file_resume = os.path.join(settings.BASE_DIR, 'static/json/resume.json')
