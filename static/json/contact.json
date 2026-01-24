@@ -31,7 +31,7 @@
     },
 
     "alert": {
-        "title": "Invalid",
+        "title": "Notification",
         "btn": "OK"
     }
 
