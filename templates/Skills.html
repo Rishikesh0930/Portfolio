@@ -22,7 +22,7 @@
             <div class="skill-card">
                 <h3>{{ skills.frontend.title }}</h3>
                 <ul>
-                    {%for item in skills.frontend_skills %}
+                    {%for item in skills.frontend.frontend_skills %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
@@ -30,7 +30,7 @@
             <div class="skill-card">
                 <h3>{{ skills.backend.title }}</h3>
                 <ul>
-                    {%for item in skills.backend_skills %}
+                    {%for item in skills.backend.backend_skills %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
@@ -38,7 +38,7 @@
             <div class="skill-card">
                 <h3>{{ skills.database.title }}</h3>
                 <ul>
-                    {%for item in skills.database_skills %}
+                    {%for item in skills.database.database_skills %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
@@ -46,7 +46,7 @@
             <div class="skill-card">
                 <h3>{{ skills.tools.title }}</h3>
                 <ul>
-                    {%for item in skills.tools_skills %}
+                    {%for item in skills.tools.tools_skills %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
