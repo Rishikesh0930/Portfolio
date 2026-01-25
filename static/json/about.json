@@ -1,67 +1,66 @@
 {
-  "cards": [
-    {
-      "key": "about_me",
-      "title": "💻 About Me",
-      "type": "text",
-      "content": "I am a passionate and detail-oriented developer with a strong interest in building modern web applications and AI-ML based applications. I enjoy transforming ideas into real-world solutions using technologies like Python, Django, Deep Learning models, HTML, CSS, and JavaScript. I am always eager to learn new tools, improve my skills, and create projects that are both functional and user-friendly."
-    },
-    {
-      "key": "career_objective",
-      "title": "🎯 Career Objective",
-      "type": "text",
-      "content": "To work with an organization that gives me ample opportunities to enhance my skills and knowledge and contribute to the organization’s growth."
-    },
-    {
-      "key": "skills",
-      "title": "🧠 Skills Highlights",
-      "type": "list",
-      "content": [
-        "Python",
-        "Django",
-        "C++",
-        "MySQL",
-        "HTML & CSS",
-        "DSA",
-        "JavaScript",
-        "Git & GitHub",
-        "Full-Stack Development",
-        "Desktop Applications Development"
-      ]
-    },
-    {
-      "key": "projects",
-      "title": "🚀 Project Highlights",
-      "type": "list",
-      "content": [
-        "🎥 AI Powered - Live Vision",
-        "🤖 Voice Assistant",
-        "🌦️ Weather App"
-      ]
-    },
-    {
-      "key": "education",
-      "title": "🎓 Education",
-      "type": "list",
-      "content": [
-        "Bachelor of Technology (B.Tech)",
-        "Department: CSE (AI & ML)",
-        "Buddha Institute of Technology",
-        "Duration: 2022 – 2026"
-      ]
-    },
-    {
-      "key": "strengths",
-      "title": "⭐ Strengths",
-      "type": "list",
-      "content": [
-        "Quick learner",
-        "Punctual",
-        "Consistent",
-        "Good Communication"
-      ]
-    }
-  ],
+    "about_me": [
+        {
+            "title": "💻 About Me",
+            "content": " I am a passionate and detail-oriented developer with a strong interest in building modern web applications and AI-ML Based applications. I enjoy transforming ideas into real-world solutions using technologies like Python, Django, Deep learning models, HTML, CSS, and JavaScript. I am always eager to learn new tools, improve my skills, and create projects that are both functional and user-friendly."
+        }
+    ],
 
-  "footer": "© 2026 All Rights Reserved | Rishikesh Kushwaha."
+    "career_obj": [
+        {
+            "title": "🎯 Career Objective",
+            "content": "To work with an organization that gives me ample opportunities to enhance my skills and knowledge and contribute to the organization’s growth."
+        }
+    ],
+
+    "skills": {
+
+        "title": "🧠 Skills Highlights",
+        "content": [
+            "Python",
+            "Django",
+            "C++",
+            "MySQL",
+            "HTML & CSS",
+            "DSA",
+            "JavaScript",
+            "Git & GitHub",
+            "Full-Stack Development",
+            "Desktop Applictions Development"
+        ]
+    },
+
+    "project": {
+
+        "title": "🚀 Project Highlights",
+        "content": [
+            "🎥 AI Powered - Live Vision",
+            "🤖 Voice Assistant",
+            "🌦️ Weather App"
+        ]
+    },
+
+    "education": {
+ 
+        "title": "🎓 Education",
+        "content": [
+            "Bachelor of Technology (B.Tech)",
+            "Department: CSE(AI & ML)",
+            "Buddha Institute of Technology",
+            "Duration: 2022 – 2026"
+        ]
+    },
+
+    "strength": {
+
+        "title": "⭐ Strengths",
+        "content": [
+            "Quick learner",
+            "Punctual",
+            "Consistent",
+            "Good Communication"
+        ]
+    },
+
+    "footer": "© 2026 All Rights Reserved | Rishikesh Kushwaha."
 }
