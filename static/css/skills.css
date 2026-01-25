@@ -36,8 +36,8 @@ body {
 }
 
 .back-btn:active {
-    background: #141f38;
-    color: #38BDF8;
+    background: #84d7fb;
+    color: #141f38;
 }
 
 .bg-circle {
@@ -241,8 +241,8 @@ body {
     }
 
     .back-btn:active {
-        background: #1b294b;
-        color: #38BDF8;
+        background: #84d7fb;
+        color: #141f38;
     }
 
     .big-left {
