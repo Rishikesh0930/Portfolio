@@ -16,46 +16,22 @@
     <div class="dot d1"></div>
     <div class="dot d2"></div>
     <div class="about-wrapper">
+        {% for card in about.cards %}
         <div class="card">
-            <h2>{{ about.about_me.0.title }}</h2>
-            <p>{{ about.about_me.0.content }}</p>
-        </div>
-        <div class="card">
-            <h2>{{ about.career_obj.0.title }}</h2>
-            <p>{{ about.career_obj.0.content }}</p>
-        </div>
-        <div class="card">
-            <h2>{{ about.skills.title }}</h2>
-            <div class="skills">
-                {% for skills_item in about.skills.content %}
-                    <span>🟢 {{ skills_item }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="card">
-            <h2>{{ about.project.title }}</h2>
-            <ul>
-                {% for project_item in about.project.content %}
-                    <li>{{ project_item }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="card">
-            <h2>{{ about.education.title }}</h2>
-            <ul> 
-                {% for education_item in about.education.content %}
-                    <li>{{ education_item }}</li>
-                {% endfor %}
+            <h2>{{ card.title }}</h2>
+
+            {% if card.type == "text" %}
+                <p>{{ card.content }}</p>
+
+            {% elif card.type == "list" %}
+                <ul>
+                    {% for item in card.content %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
+            {% endif %}
         </div>
-        <div class="card">
-            <h2>{{ about.strength.title }}</h2>
-            <ul>
-                {% for strength_item in about.strength.content %}
-                    <li>{{ strength_item }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+        {% endfor %}
     </div>
     <footer class="footer">
         <p>{{ about.footer }}</p>
