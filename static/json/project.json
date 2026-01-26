@@ -8,7 +8,9 @@
             "title": "🎥 Live Vision",
             "content": "The proposed system, “Live Vision” is an intelligent computer vision–based platform designed to detect and classify multiple object categories in real-time video streams. The system processes live video input from cameras or video files and applies deep learning models to accurately identify and label objects across multiple predefined classes simultaneously.",
             "img": ["images/Lv1.png","images/Lv2.png","images/Lv3.png"],
-            "language": ["Python","OpenCV","Django","Deep Learning","Web Application"]
+            "language": ["Python","OpenCV","Django","Deep Learning","Web Application"],
+            "live_btn": "Live Demo",
+            "code_btn": "Source Code"
         },
 
         {   
@@ -16,7 +18,9 @@
             "title": "🤖 Voice Assistant",
             "content": "An intelligent voice-controlled assistant that listens, understands and responds to user commands and you can click keybord buttons through the voice command.",
             "img": ["images/va1.png","images/va2.png","images/va3.png"],
-            "language": ["Python","Speech Recognition","PyAudio","Pyttsx3"]
+            "language": ["Python","Speech Recognition","PyAudio","Pyttsx3"],
+            "live_btn": "Live Demo",
+            "code_btn": "Source Code"
         },
 
         {
@@ -24,10 +28,7 @@
             "title": "🌦️ Weather App",
             "content": "A clean and responsive weather Desktop application that provides real-time weather updates based on location or city search.",
             "img": ["images/wa1.png","images/wa2.png","images/wa3.png"],
-            "language": ["Python","Tkinter","CTkinter","Weather API"]
-        },
-
-        {
+            "language": ["Python","Tkinter","CTkinter","Weather API"],
             "live_btn": "Live Demo",
             "code_btn": "Source Code"
         }
