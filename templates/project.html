@@ -18,89 +18,39 @@
     <div class="project-wrapper">
         <h1 class="page-title">{{ project.title }}</h1>
         <p class="page-subtitle">{{ project.subtitle }}</p>
+        {% for card in project.cards%}
         <div class="card">
             <div class="card-slider">
                 <div class="slider-track">
-                    {% for img in project.lv_image.lv_img %}
-                        <img src="{% static img %}" alt="">
+                    {% for image in card.img %}
+                        <img src="{% static image %}" alt="">
                     {% endfor %}
                 </div>
             </div>
-            <h2>{{ project.lv_image.title }}</h2>
+            <h2>{{ card.title }}</h2>
             <div class="project-content">
-                <p>{{ project.lv_image.content }}</p>
+                <p>{{ card.content }}</p>
                 <div class="project-tech">
-                    {% for lang in project.lv_image.language %}
+                    {% for lang in card.language %}
                         <span>{{ lang }}</span>
                     {% endfor %}
                 </div>
             </div>
             <div class="project-actions">
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i>{{ project.live_btn }}
+                    <i class="fas fa-play"></i>{{ card.live_btn }}
                 </button>
                 <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i>{{ project.code_btn }}
+                    <i class="fab fa-github"></i>{{ card.code_btn }}
                 </button>
             </div>
         </div>
-        <div class="card">
-            <div class="card-slider">
-                <div class="slider-track">
-                    {% for img in project.va_image.va_img %}
-                        <img src="{% static img %}" alt="">
-                    {% endfor %}
-                </div>
-            </div>
-            <h2>{{ project.va_image.title }}</h2>
-            <div class="project-content">
-                <p>{{ project.va_image.content }}</p>
-                <div class="project-tech">
-                    {% for lang in project.va_image.language %}
-                        <span>{{ lang }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="project-actions">
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i>{{ project.live_btn }}
-                </button>
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i>{{ project.code_btn }}
-                </button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-slider">
-                <div class="slider-track">
-                    {% for img in project.wa_image.wa_img %}
-                        <img src="{% static img %}" alt="">
-                    {% endfor %}
-                </div>
-            </div>
-            <h2>{{ project.wa_image.title }}</h2>
-            <div class="project-content">
-                <p>{{ project.wa_image.content }}</p>
-                <div class="project-tech">
-                    {% for lang in project.wa_image.language %}
-                        <span>{{ lang }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="project-actions">
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fas fa-play"></i>{{ project.live_btn }}
-                </button>
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i>{{ project.code_btn }}
-                </button>
-            </div>
-        </div>
+        {% endfor %}
         <div class="coming-popup" id="comingPopup">
             <div class="popup-box">
-                <h3>{{ project.popup_msg.title }}</h3>
-                <p>{{ project.popup_msg.msg }}</p>
-                <button onclick="closePopup()">{{ project.popup_msg.btn }}</button>
+                <h3>{{ project.status }}</h3>
+                <p>{{ project.msg }}</p>
+                <button onclick="closePopup()">{{ project.btn }}</button>
             </div>
         </div>
     </div>
