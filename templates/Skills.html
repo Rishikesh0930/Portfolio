@@ -19,38 +19,16 @@
         <h1 class="page-title">{{ skills.title }}</h1>
         <p class="page-subtitle">{{ skills.subtitle }}</p>
         <div class="skills-grid">
+            {% for card in skils.cards%}
             <div class="skill-card">
-                <h3>{{ skills.frontend.title }}</h3>
+                <h3>{{ card.title }}</h3>
                 <ul>
-                    {%for item in skills.frontend.frontend_skills %}
+                    {%for item in card.skills %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="skill-card">
-                <h3>{{ skills.backend.title }}</h3>
-                <ul>
-                    {%for item in skills.backend.backend_skills %}
-                        <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>{{ skills.database.title }}</h3>
-                <ul>
-                    {%for item in skills.database.database_skills %}
-                        <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>{{ skills.tools.title }}</h3>
-                <ul>
-                    {%for item in skills.tools.tools_skills %}
-                        <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% endfor %}
         </div>
     </section>
     <footer class="footer">
