@@ -265,7 +265,11 @@ body {
         font-size: 18px;
     }
 
-    .card p,
+    .card p{
+        text-align: justify;
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
     .card ul li {
         font-size: 12.5px;
         line-height: 1.5;
@@ -313,6 +317,7 @@ body {
 
     .card p {
         font-size: 12.5px;
+        text-align: justify;
     }
 
     .footer {
