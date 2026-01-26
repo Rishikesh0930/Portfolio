@@ -19,11 +19,11 @@
         <h1 class="page-title">{{ skills.title }}</h1>
         <p class="page-subtitle">{{ skills.subtitle }}</p>
         <div class="skills-grid">
-            {% for card in skils.cards%}
+            {% for card in skills.cards%}
             <div class="skill-card">
                 <h3>{{ card.title }}</h3>
                 <ul>
-                    {%for item in card.skills %}
+                    {%for item in card.skill %}
                         <li>{{ item }}</li>
                     {% endfor %}
                 </ul>

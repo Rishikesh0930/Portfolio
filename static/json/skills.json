@@ -10,7 +10,7 @@
     "cards": [
         {
             "title": "💻 Frontend",
-            "skills": [
+            "skill": [
                 "HTML",
                 "CSS",
                 "JavaScript",
@@ -20,7 +20,7 @@
 
         {
             "title": "💻 Backend",
-            "skills": [
+            "skill": [
                 "Python",
                 "Django Framework",
                 "Authentication & APIs"
@@ -29,7 +29,7 @@
 
         {
             "title": "🗄️ Database",
-            "skills": [
+            "skill": [
                 "SQLite",
                 "MySQL",
                 "PostgreSQL"
@@ -38,7 +38,7 @@
 
         {
             "title": "⚙️ Tools",
-            "skills": [
+            "skill": [
                 "Git & GitHub",
                 "Django Templates",
                 "Machine Learning Models",
