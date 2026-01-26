@@ -37,12 +37,14 @@
                 </div>
             </div>
             <div class="project-actions">
-                <button class="btn primary" onclick="comingSoon()">
+                <button class="btn primary" onclick="comingSoon()"> 
                     <i class="fas fa-play"></i>{{ card.live_btn }}
                 </button>
-                <button class="btn primary" onclick="comingSoon()">
-                    <i class="fab fa-github"></i>{{ card.code_btn }}
-                </button>
+                {% for item in card.urls %}
+                    <button class="btn primary" {% url item %}>
+                        <i class="fab fa-github"></i>{{ card.code_btn }}
+                    </button>
+                {% endfor %}
             </div>
         </div>
         {% endfor %}

@@ -10,7 +10,8 @@
             "img": ["images/Lv1.png","images/Lv2.png","images/Lv3.png"],
             "language": ["Python","OpenCV","Django","Deep Learning","Web Application"],
             "live_btn": "Live Demo",
-            "code_btn": "Source Code"
+            "code_btn": "Source Code",
+            "urls": "https://github.com/Rishikesh0930/Live-Vision"
         },
 
         {   
@@ -20,7 +21,8 @@
             "img": ["images/va1.png","images/va2.png","images/va3.png"],
             "language": ["Python","Speech Recognition","PyAudio","Pyttsx3"],
             "live_btn": "Live Demo",
-            "code_btn": "Source Code"
+            "code_btn": "Source Code",
+            "urls": "https://github.com/Rishikesh0930/Voice-Assistant"
         },
 
         {
@@ -30,7 +32,8 @@
             "img": ["images/wa1.png","images/wa2.png","images/wa3.png"],
             "language": ["Python","Tkinter","CTkinter","Weather API"],
             "live_btn": "Live Demo",
-            "code_btn": "Source Code"
+            "code_btn": "Source Code",
+            "urls": "https://github.com/Rishikesh0930/Weather-App"
         }
     ],
 
