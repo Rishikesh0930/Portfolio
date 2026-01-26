@@ -41,7 +41,7 @@
                     <i class="fas fa-play"></i>{{ card.live_btn }}
                 </button>
                 {% for item in card.urls %}
-                    <button class="btn primary" onclick="window.location.href='{% url item %}'">
+                    <button class="btn primary" onclick="window.location.href='{{ item }}'">
                         <i class="fab fa-github"></i>{{ card.code_btn }}
                     </button>
                 {% endfor %}
