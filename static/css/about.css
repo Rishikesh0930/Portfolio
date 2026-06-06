@@ -114,8 +114,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.25);
+    box-shadow: 0 0px 20px rgba(56, 189, 248, 0.25);
 }
 
 .card h2 {
@@ -261,6 +260,10 @@ body {
         border-radius: 14px;
     }
 
+    .card:hover{
+        transform: none;
+        box-shadow: none;
+    }
     .card h2 {
         font-size: 18px;
     }
@@ -309,6 +312,11 @@ body {
     .about-wrapper {
         margin: 60px 15px 20px;
         gap: 20px;
+    }
+
+    .card:hover{
+        transform: none;
+        box-shadow: none;
     }
 
     .card h2 {
