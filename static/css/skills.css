@@ -118,7 +118,7 @@ body {
 
 .skill-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.28);
+    box-shadow: 0 0px 20px rgba(56, 189, 248, 0.28);
 }
 
 .skill-card h3 {
@@ -279,6 +279,11 @@ body {
         padding: 20px;
         margin-top: -20px;
         margin-bottom: 15px;
+    }
+
+    .skill-card:hover {
+        box-shadow: none;
+        transform: none;
     }
 
     .skill-card h3 {

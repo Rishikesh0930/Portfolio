@@ -127,7 +127,6 @@ body {
 }
 
 .card:hover {
-    /* transform: translateY(-5px) scale(1.02); */
     box-shadow: 0 0px 20px rgba(56, 189, 248, 0.25);
 }
 
@@ -455,6 +454,11 @@ body {
         border-radius: 14px;
     }
 
+    .card:hover{
+        box-shadow: none;
+        transform: none;
+    }
+
     .card h2 {
         font-size: 18px;
     }
@@ -572,6 +576,11 @@ body {
 
     .card {
         padding: 16px;
+    }
+
+    .card:hover{
+        box-shadow: none;
+        transform: none;
     }
 
     .card h2 {
