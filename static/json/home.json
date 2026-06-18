@@ -15,7 +15,7 @@
             "url_name": "about-page"
         },
         {
-            "name": "Project",
+            "name": "Projects",
             "url_name": "project-page"
         },
         {
@@ -25,6 +25,10 @@
         {
             "name": "Resume",
             "url_name": "resume-page"
+        },
+        {
+            "name": "Certificates",
+            "url_name": "certificate-page"
         },
         {
             "name": "Contact",

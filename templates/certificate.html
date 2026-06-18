@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/certificate.css' %}">
+</head>
+<body>
+    <a href="{% url 'home-page' %}" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <div class="bg-circle big-left"></div>
+    <div class="bg-circle big-right"></div>
+    <div class="certificate-wrapper">
+        <h2>{{ certificate.title }}</h2>
+        {% for certificate in certificate.card %}
+            <div class="card">
+                <p class="certificate-text">{{ certificate.content }}</p>
+                <p class="certificate-text1">{{ certificate.title }}</p>
+                <ul class="certificate-highlights">
+                    {% for highlights_item in certificate.highlights %}
+                        <li>{{ highlights_item }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="certificate-buttons">
+                    <a href="{% static certificate.pdf %}" target="_blank" class="btn view-btn">
+                        <i class="{{ certificate.view_icon }}"></i>{{ certificate.view_btn }}
+                    </a>
+                    <a href="{% static certificate.pdf %}" download class="btn download-btn">
+                        <i class="{{ certificate.download_icon}}"></i>{{ certificate.download_btn }}
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <footer class="footer">
+        <p>{{ certificate.footer }}</p>
+    </footer>
+</body>
+</html>

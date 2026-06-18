@@ -1,0 +1,76 @@
+{
+    "title": "📄Certificate & Achievement",        
+    "card": [
+        {
+            "content": "1. Offer Latter From - (TECHNEX'25)",
+            "title": "Role - Machine Learning",
+
+            "highlights": [
+                "Date - 26 Jun 2025",
+                "Employment Type - Internship",
+                "Location - Ghaziabad-Delhi NCR",
+                "The Annual Techno-Menagement FEST, IIT (BHU) Varanasi.",
+                "Selected for the role of Machine Learing Intern. Responsibilities include backend development, database management, and Machine Learing Models development."
+            ],
+
+            "view_btn": "View Latter",
+            "view_icon": "fa-regular fa-eye",
+            "download_btn": "Download Latter",
+            "download_icon": "fa-solid fa-download",
+            "pdf": "/pdf/Technex_Offer_Latter.pdf"
+        },
+        {
+            "content": "2. Welcome Latter From - (Atlysbridge Solution)",
+            "title": "Role - Python Developer",
+
+            "highlights": [
+                "Date - 01 May 2026",
+                "Employment Type - Internship, Full-Time",
+                "Location - Remote/Banglore",
+                "Selected for the role of Python Developer Intern. Responsibilities include Python Programming, backend development, database management, and API Integration."
+            ],
+
+            "view_btn": "View Latter",
+            "view_icon": "fa-regular fa-eye",
+            "download_btn": "Download Latter",
+            "download_icon": "fa-solid fa-download",
+            "pdf": "/pdf/Welcome_Latter.pdf"
+        },
+        {
+            "content": "3. Machine Learining Intern Certificate",
+            "title": "Organization - TECHNEX'25 IIT (BHU), Varanasi",
+
+            "highlights": [
+                "Date - 05 July To 18 Aug of 2025 (6 week)",
+                "Employment Type - Internship",
+                "Location - Remote/Ghaziabad-Delhi NCR",
+                "Successfully completed a 6-week Machine Learning Internship Program covering Python fundamentals, Tkiner, NumPy, Pandas, Matplotlib, file handling, and Machine Learning Models."
+            ],
+
+            "view_btn": "View Certificate",
+            "view_icon": "fa-regular fa-eye",
+            "download_btn": "Download Certificate",
+            "download_icon": "fa-solid fa-download",
+            "pdf": "/pdf/ML_Certificate.pdf"
+        },
+        {
+            "content": "4. Published Research Paper Certificate",
+            "title": "Journal name - IJRASET, ISSN: 2321-9653, (International Journal for Research in Applied Science & Engineering Technology)",
+
+            "highlights": [
+                "Title - Live Vision (Multi-Objects Classification & Detection System)",
+                "Date - Jan 2026",
+                "Author- Rishikesh Kushwaha",
+                "Research Domain (AI, Machine Learning, Data Science, Web Development)",
+                "This research focuses on developing a real-time computer vision system capable of detecting and analyzing objects from live camera feeds. The system utilizes deep learning and image processing techniques to identify objects, extract meaningful information, and provide instant visual insights."
+            ],
+
+            "view_btn": "View Certificate",
+            "view_icon": "fa-regular fa-eye",
+            "download_btn": "Download Certificate",
+            "download_icon": "fa-solid fa-download",
+            "pdf": "/pdf/Published_Certificate.pdf"
+        }
+    ],
+    "footer": "© 2026 All Rights Reserved | Rishikesh Kushwaha."
+}

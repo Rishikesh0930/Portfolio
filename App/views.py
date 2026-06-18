@@ -35,6 +35,12 @@ def resume_page(request):
         resume = json.load(f)
     return render(request, 'resume.html', {"resume": resume})
 
+def certificate_page(request):
+    json_file_certificate = os.path.join(settings.BASE_DIR, 'static/json/certificate.json')
+    with open(json_file_certificate, 'r', encoding='utf-8') as f:
+        certificate = json.load(f)
+    return render(request, 'certificate.html', {"certificate": certificate})
+
 def send_telegram_message(text):
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
